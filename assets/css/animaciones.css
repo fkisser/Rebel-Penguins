@@ -32,17 +32,18 @@
 }
 
 /*HEADER*/
+@media (max-width: 992px) {
+    #menu-button:checked ~ nav {
+        animation: aparecer 1s ease-in forwards,
+        slide-left 1.1s ease-in forwards;
+    }
+    #menu-button:not(:checked) ~ nav {
+        animation: desaparecer 1s ease-out forwards,
+        slide-right 1.1s ease-out forwards;
+    }
+}
 .open:hover, .close:hover{
     cursor: pointer;
-}
-
-#menu-button:checked ~ nav {
-    animation: aparecer 1s ease-in forwards,
-    slide-left 1.1s ease-in-out forwards;
-}
-#menu-button:not(:checked) ~ nav {
-    animation: desaparecer 1s ease-in forwards,
-    slide-right 1.1s ease-in-out forwards;
 }
 .menu a:hover{
     border-bottom: 2px solid var(--naranja);
