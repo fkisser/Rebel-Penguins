@@ -35,15 +35,26 @@
     }
 }
 
-@media (max-width: 756px) {
+@media (max-width: 768px) {
     .menu nav {
-        width: 30%;
+        width: 40%;
         padding: 35px 25px;
     }
     .menu .links{
         display: flex;
         flex-direction: column;
         text-align: right;
+        gap: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .menu nav {
+        width: 100%;
+        padding: 35px 25px;
+    }
+    .menu .links{
+        text-align: center;
         gap: 35px;
     }
 }
