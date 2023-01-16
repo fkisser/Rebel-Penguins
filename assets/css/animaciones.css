@@ -30,7 +30,10 @@
         transform: translateX(100%);
     }
 }
-
+html {
+    scroll-padding-top: 100px;
+    scroll-behavior: smooth;
+}
 /*HEADER*/
 @media (max-width: 992px) {
     #menu-button:checked ~ nav {
