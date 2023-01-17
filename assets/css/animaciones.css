@@ -59,10 +59,6 @@ html {
     border-bottom: 2px solid var(--naranja);
     transition: all 0.3s ease;
 }
-h1 .cursor{
-    height: 110%;
-    border-left: 2px solid var(--rojo);
-    animation: blink 1s steps(2, start) infinite;
-}
+
 
 

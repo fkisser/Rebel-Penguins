@@ -1,11 +1,12 @@
 :root{
-    --oscuro: #262626;
-    --gris: #CCCCCC;
-    --claro: #F5F5F5;
-    --amarillo: #fdc907;
-    --naranja: #F4991D;
-    --rojo: #af3019;
-    --gradiente: linear-gradient(to right, #ffa100, #fb103d);
+    --oscuro: #1A1819;
+    --gris: #767568;
+    --claro: #F5F4F4;
+    --amarillo: #ffcc03;
+    --naranja: #ec663b;
+    --gradiente: linear-gradient(to right, #ffcc03, #ec663b);
+
+    --fuenteRebelde: 'Covered By Your Grace', cursive;
 }
 
 * {
@@ -50,18 +51,37 @@ section:last-child{
     border-radius: 3px;
     width: fit-content;
 }
-.vacio-rojo{
-    color: var(--rojo);
-    border: solid 2px var(--rojo);
+.vacio-amarillo{
+    color: var(--amarillo);
+    border: solid 2px var(--amarillo);
 }
-.lleno-rojo{
+.lleno-amarillo{
+    color: var(--oscuro);
+    background-color: var(--amarillo);
+}
+.vacio-naranja{
+    color: var(--naranja);
+    border: solid 2px var(--naranja);
+}
+.lleno-naranja{
     color: white;
-    background-color: var(--rojo);
+    background-color: var(--naranja);
 }
 
 /* RESALTADORES */
-.high-rojo{
-    background-color: var(--rojo);
+.high-amarillo{
+    background-color: var(--amarillo);
+}
+.high-naranja{
+    background-color: var(--naranja);
+}
+
+/* COLORES DE TEXTO*/
+.naranja{
+    color: var(--naranja);
+}
+.amarillo{
+    color: var(--amarillo);
 }
 
 
@@ -128,11 +148,16 @@ section:last-child{
     font-size: 40px;
     font-weight: 900;
 }
-#hero .content .text{
+#hero h1 span{
+    font-size: 60px;
+    font-family: var(--fuenteRebelde);
+}
+
+#hero .content .hero-text{
     font-size: 18px;
     margin-bottom: 20px;
 }
-#hero h1, #hero .text{
+#hero h1, #hero .hero-text{
     text-shadow: 1px 1px 1px var(--oscuro);
 }
 
@@ -144,7 +169,14 @@ section:last-child{
     height: 100%;
     width: 100%;
     z-index: 0;
-    background: rgba(253, 201, 7, 0.75);
-    /* backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px); */
+}
+.filtro--amarillo{
+    background: rgba(255, 204, 3, 0.7);
+}
+.filtro--naranja{
+    background: rgba(236, 102, 59, 0.7);
+}
+.filtro--blur{
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
