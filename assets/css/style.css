@@ -1,3 +1,4 @@
+/******************GLOBALES******************/
 :root{
     --oscuro: #1A1819;
     --gris: #767568;
@@ -22,6 +23,7 @@ html{
     background: var(--claro);
     color: var(--oscuro);
 }
+html::sc
 main {
     margin-top: 100px;
     display: flex;
@@ -33,12 +35,13 @@ section{
     margin: 25px 0;
     padding: 0 25px;
     display: flex;
-    width: 100%;
-    max-width: 1200px;
+    flex-direction: column;
+    width: 90%;
+    max-width: 2000px;
     gap: 20px;
 }
 section:first-child{
-    margin-top: 0px;
+    margin: 0px;
 }
 section:last-child{
     margin-bottom: 50px;
@@ -84,8 +87,28 @@ section:last-child{
     color: var(--amarillo);
 }
 
+/*FILTROS*/
+.filtro--amarillo{
+    background: rgba(255, 204, 3, 0.7);
+}
+.filtro--naranja{
+    background: rgba(236, 102, 59, 0.7);
+}
+.filtro--blur{
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
 
+/*CARDS*/
+.card{
+    display: flex;
+    background-color: var(--gris);
+}
+.card .circle-frame{
+    border-radius: 50%;
+}
 
+/******************HEADER******************/
 #header{
     z-index: 2;
     background-color: var(--claro);
@@ -96,6 +119,7 @@ section:last-child{
     justify-content: center;
     height: 100px;
     width: 100%;
+    max-width: 2000px;
     box-shadow: 0px 0px 5px 0px rgba(38, 38, 38 , .5);
 }
 .logo{
@@ -126,13 +150,15 @@ section:last-child{
 #menu-button, .open, .close{
     display: none;
 }
-
+/******************PORTADA******************/
 #hero{
+    width: 100%;
+    height: 100%;
     position: relative;
     background: url(../img/hero2.jpeg);
     background-size: cover;
     background-position: top;
-    padding: 100px 0 40px 60px;
+    padding: 200px 0 40px 25px;
     color: var(--oscuro);
 }
 
@@ -140,6 +166,7 @@ section:last-child{
     z-index: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
     color: white;
 }
@@ -154,27 +181,27 @@ section:last-child{
 }
 
 #hero h1{
-    font-size: 63px;
+    font-size: 70px;
     font-weight: 900;
-    line-height: 30px;
+    line-height: 40px;
     text-transform: uppercase;
     padding-bottom: 25px;
 }
 #hero h1 span{
-    font-size: 75px;
+    font-size: 90px;
     font-weight: 400; /*sino hereda 900 en mobile*/
     font-family: var(--fuenteRebelde);
     text-transform: capitalize;
 }
 
 #hero .content .hero-text{
-    font-size: 18px;
+    text-align: center;
+    font-size: 22px;
     margin-bottom: 20px;
 }
 #hero h1, #hero .hero-text{
     text-shadow: 1px 1px 1px var(--oscuro);
 }
-
 
 #hero .glass{
     position: absolute;
@@ -184,13 +211,71 @@ section:last-child{
     width: 100%;
     z-index: 0;
 }
-.filtro--amarillo{
-    background: rgba(255, 204, 3, 0.7);
+
+/******************ABOUT US******************/
+#about .content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
-.filtro--naranja{
-    background: rgba(236, 102, 59, 0.7);
+.content .paragraphs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: justify;
 }
-.filtro--blur{
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+.content .botones{
+    display: flex;
+    justify-content: space-around;
 }
+
+#about .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.personas{
+    max-width: 400px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    gap: 15px;
+}
+.personas .first-part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.personas .circle-frame{
+    width: 150px;
+    height: 150px;
+}
+
+.personas .profile{
+    width: 150px;
+    height: 150px;
+    background: url(../img/perfil-unknown.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.personas .boton{
+    justify-self: flex-end;
+}
+
+
+/******************EXPERIENCIAS******************/
+
+
+
+/******************CONTACTO******************/
+
+
+
+/******************FOOTER******************/
