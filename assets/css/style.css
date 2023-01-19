@@ -92,6 +92,10 @@ section:last-child{
 .filtro--amarillo{
     background: rgba(255, 204, 3, 0.7);
 }
+.filtro--amarillo-grad{
+    background: linear-gradient(to bottom, var(--amarillo), var(--amarillo), var(--amarillo),  var(--oscuro));
+    opacity: 0.7;
+}
 .filtro--naranja{
     background: rgba(236, 102, 59, 0.7);
 }
