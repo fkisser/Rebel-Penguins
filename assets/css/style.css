@@ -128,7 +128,6 @@ section:last-child{
 .card{
     display: flex;
     color: white;
-    border-radius: 5px;
 }
 .card .circle-frame{
     border-radius: 50%;
@@ -311,14 +310,9 @@ section:last-child{
     background-size: cover;
 }
 
-.personas .boton{
-    justify-self: flex-end;
-}
-
 #pqPing, #pqRebel{
     background-size: cover;
     padding: 25px;
-    border-radius: 5px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -340,7 +334,7 @@ section:last-child{
 #experiences{
     display: flex;
     flex-direction: column;
-
+    gap: 50px;
 }
 
 #experiences .text{
@@ -353,6 +347,38 @@ section:last-child{
     line-height: 60px;
 }
 
+#experiences .cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.actividad{
+    background-color: var(--amarillo);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    max-width: 800px;
+    padding: 25px;
+    gap: 15px;
+}
+
+.actividad:nth-child(2), .actividad:nth-child(3){
+    background-color: var(--naranja);
+}
+
+.actividad .first-part{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-shadow: 1px 1px 1px var(--oscuro);
+}
+
+.actividad h3{
+    font-size: 24px;
+}
 
 /******************CONTACTO******************/
 
