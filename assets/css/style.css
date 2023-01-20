@@ -90,6 +90,14 @@ section:last-child{
     color: white;
     background-color: var(--naranja);
 }
+.vacio-gris{
+    color: var(--gris);
+    border: solid 2px var(--gris);
+}
+.vacio-oscuro{
+    color: var(--oscuro);
+    border: solid 2px var(--oscuro);
+}
 
 /* RESALTADORES */
 .high-amarillo{
@@ -370,7 +378,7 @@ section:last-child{
     color: var(--oscuro);
 }
 .actividad:nth-child(2), .actividad:nth-child(3){
-    background-color: var(--naranja);
+    background-color: var(--gris);
 }
 
 .actividad .first-part{
