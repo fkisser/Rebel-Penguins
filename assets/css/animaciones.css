@@ -16,15 +16,15 @@
 }
 @keyframes slide-left {
     from {
-        transform: translateX(calc(100% + 25px));
+        transform: translateX(calc(100% + 2.5rem));
     }
     to {
-        transform: translateX(0px);
+        transform: translateX(0);
     }
 }
 @keyframes slide-right {
     from {
-        transform: translateX(0px);
+        transform: translateX(0);
     }
     to {
         transform: translateX(100%);
@@ -36,11 +36,44 @@
     }
 }
 
-
 html {
-    scroll-padding-top: 115px;
+    scroll-padding-top: 5rem;
     scroll-behavior: smooth;
 }
+
+/*BOTONES*/
+.boton{
+    transition: all 0.2s ease-out;
+}
+.boton:hover{
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+.lleno-amarillo:hover{
+    background-color: var(--naranja);
+    color: white;
+    transition: all 0.2s ease-out;
+}
+.vacio-amarillo:hover{
+    color: var(--oscuro);
+    background-color: var(--amarillo);
+    transition: all 0.2s ease-out;
+}
+.send:hover{
+    color: var(--oscuro);
+    background-color: var(--amarillo);
+    border: none;
+    transition: all 0.2s ease-out;
+}
+.send:hover .icon{
+    transform: translateX(2rem) rotate(45deg) scale(1.5);
+    transition: all 0.2s ease-out;
+}
+.send:hover span{
+    animation: desaparecer .1s ease-out forwards;
+    transition: all 0.2s ease-out;
+}
+
 /*HEADER*/
 @media (max-width: 992px) {
     #menu-button:checked ~ nav {
@@ -56,9 +89,24 @@ html {
     cursor: pointer;
 }
 .menu a:hover{
-    border-bottom: 2px solid var(--naranja);
+    border-bottom: .2rem solid var(--naranja);
     transition: all 0.3s ease;
 }
 
 
+
+/*CONTACTO*/
+.formTouple{
+
+}
+
+.formTouple input{
+    transition: all 0.3s ease;
+}
+.formTouple input:hover, textarea:hover, .formTouple input:focus, textarea:focus{
+    background-color: var(--claro);
+    transition: all 0.3s ease;
+    border-bottom: .3rem solid var(--naranja );
+    transition: all 0.3s ease;
+}
 

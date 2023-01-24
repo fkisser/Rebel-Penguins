@@ -2,6 +2,7 @@
 :root{
     --oscuro: rgb(26, 24, 25);
     --gris: rgb(118, 117, 104);
+    --grisclaro: rgb(220, 218, 218);
     --claro: rgb(245, 244, 244);
     --amarillo: rgb(255, 204, 3);
     --naranja: rgb(236, 102, 59);
@@ -21,64 +22,68 @@
 
 html{
     background: var(--claro);
-    color: var(--oscuro);
+    font-size: 62.5%; /*1 rem = 10px*/
 }
-html::sc
+
 main {
-    margin-top: 100px;
+    margin-top: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 1.5rem;
 }
-section{
-    margin: 40px auto;
-    padding: 0 25px;
+.container{
+    margin: 4rem auto;
+    padding: 0 2.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 90%;
-    max-width: 2000px;
-    gap: 20px;
+    max-width: 200rem;
+    gap: 2rem;
 }
 section:first-child{
-    margin: 0px;
+    margin: 0;
 }
 section:last-child{
-    margin-bottom: 50px;
+    margin-bottom: 5rem;
+}
+section:nth-child(odd){
+    background-color: var(--grisclaro);
 }
 .sect-title{
     align-self: flex-start;
-    font-size: 50px;
+    font-size: 4.5rem;
     /* font-family: var(--fuenteRebelde); */
     font-weight: 700;
     color: var(--naranja);
-    text-shadow: 1px 1px 1px var(--oscuro);
-    line-height: 25px;
-    margin-top: 30px;
+    text-shadow: .1rem .2rem .1rem var(--oscuro);
+    line-height: 2.5rem;
+    margin-top: 3rem;
     text-transform: uppercase;
 }
 .sect-paragraph{
-    font-size: 18px;
+    font-size: 1.8rem;
     text-align: justify;
 }
 .minor-title{
-    font-size: 40px;
+    font-size: 4rem;
     font-family: var(--fuenteRebelde);
     color: var(--amarillo);
-    text-shadow: 1px 1px 1px var(--oscuro);
+    text-shadow: .1rem .1rem .1rem var(--oscuro);
 }
 /* BOTONES */
 .boton{
-    padding: 10px 30px;
+    padding: 1rem 3rem;
     text-align: center;
     font-weight: 500;
-    border-radius: 3px;
+    border-radius: .3rem;
     width: fit-content;
 }
 .vacio-amarillo{
     color: var(--amarillo);
-    border: solid 2px var(--amarillo);
+    border: solid .2rem var(--amarillo);
 }
 .lleno-amarillo{
     color: var(--oscuro);
@@ -86,7 +91,7 @@ section:last-child{
 }
 .vacio-naranja{
     color: var(--naranja);
-    border: solid 2px var(--naranja);
+    border: solid .2rem var(--naranja);
 }
 .lleno-naranja{
     color: white;
@@ -94,11 +99,11 @@ section:last-child{
 }
 .vacio-gris{
     color: var(--gris);
-    border: solid 2px var(--gris);
+    border: solid .2rem var(--gris);
 }
 .vacio-oscuro{
     color: var(--oscuro);
-    border: solid 2px var(--oscuro);
+    border: solid .2rem var(--oscuro);
 }
 
 /* RESALTADORES */
@@ -129,8 +134,8 @@ section:last-child{
     background: rgba(236, 102, 59, 0.7);
 }
 .filtro--blur{
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(.5rem);
+    -webkit-backdrop-filter: blur(.5rem);
 }
 
 /*CARDS*/
@@ -147,23 +152,23 @@ section:last-child{
     z-index: 2;
     background-color: var(--claro);
     position: fixed;
-    top: 0px;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px;
+    height: 10rem;
     width: 100%;
-    max-width: 2000px;
-    box-shadow: 0px 0px 5px 0px rgba(38, 38, 38 , .5);
+    max-width: 200rem;
+    box-shadow: 0 0 .5rem 0 rgba(38, 38, 38 , .5);
 }
 .logo{
-    max-height: 70px;
+    max-height: 7rem;
 }
 .navbar{
     max-height: 100%;
-    padding: 15px 25px;
+    padding: 1.5rem 2.5rem;
     width: 100%;
-    max-width: 1500px;
+    max-width: 150rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -173,12 +178,13 @@ section:last-child{
 }
 .links{
     display: flex;
-    gap: 40px;
+    gap: 4rem;
 }
 .links a{
     color: var(--oscuro);
+    font-size: 1.5rem;
     font-weight: 400;
-    border-bottom: 2px solid var(--claro);
+    border-bottom: .2rem solid var(--claro);
     transition: all 0.3s ease;
 }
 #menu-button, .open, .close{
@@ -191,8 +197,7 @@ section:last-child{
     position: relative;
     background: url(../img/hero2.jpeg);
     background-size: cover;
-    background-position-y: 100px;
-    padding: 250px 0 40px 25px;
+    padding: 13rem 0 4rem 1rem;
     color: var(--oscuro);
 }
 
@@ -201,28 +206,28 @@ section:last-child{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 60px;
+    gap: 4rem;
     color: white;
 }
 
 #hero .title{
     display: flex;
     align-items: flex-end;
-    max-width: 500px;
+    max-width: 50rem;
 }
 #hero .title img{
-    height: 190px;
+    height: 19rem;
 }
 
 #hero h1{
-    font-size: 70px;
+    font-size: 7rem;
     font-weight: 900;
-    line-height: 40px;
+    line-height: 4rem;
     text-transform: uppercase;
-    padding-bottom: 25px;
+    padding-bottom: 2.5rem;
 }
 #hero h1 span{
-    font-size: 90px;
+    font-size: 9rem;
     font-weight: 400; /*sino hereda 900 en mobile*/
     font-family: var(--fuenteRebelde);
     text-transform: capitalize;
@@ -231,15 +236,14 @@ section:last-child{
 #hero .content .hero-text{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 2rem;
     font-weight: 500;
     text-align: center;
-    font-size: 22px;
-    margin-bottom: 20px;
-    margin-top: -50px;
+    font-size: 2.2rem;
+    margin-top: -3rem;
 }
 #hero h1, #hero .hero-text{
-    text-shadow: 1px 1px 1px var(--oscuro);
+    text-shadow: .1rem .1rem .1rem var(--oscuro);
 }
 
 #hero .glass{
@@ -256,11 +260,11 @@ section:last-child{
 #about, .content{
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 4rem;
 }
 #about .content > div{
     display: flex;
-    gap: 30px;
+    gap: 3rem;
 }
 .content .paragraphs{
     display: flex;
@@ -272,29 +276,29 @@ section:last-child{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 30px;
+    gap: 3rem;
 }
 
 #about .cards{
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: center;
-    gap: 50px;
+    gap: 5rem;
 }
 
 .personas{
-    max-width: 400px;
+    max-width: 40rem;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 25px;
-    gap: 25px;
+    padding: 2.5rem;
+    gap: 2.5rem;
     background: linear-gradient(120deg, rgba(118, 117, 104, .5), rgba(26, 24, 25, .7), rgba(26, 24, 25, .7) 75%, rgba(118, 117, 104, .5)), url(../img/hero2.jpeg);
     background-size: cover;
 }
 .personas h4{
     font-family: var(--fuenteRebelde);
-    font-size: 35px;
+    font-size: 3.5rem;
 }
 
 .personas li{
@@ -308,17 +312,17 @@ section:last-child{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 15px;
+    gap: 1.5rem;
 }
 
 .personas .circle-frame{
-    width: 150px;
-    height: 150px;
+    width: 15rem;
+    height: 15rem;
 }
 
 .personas .profile{
-    width: 150px;
-    height: 150px;
+    width: 15rem;
+    height: 15rem;
     background: url(../img/perfil-unknown.png);
     background-position: center;
     background-size: cover;
@@ -326,11 +330,11 @@ section:last-child{
 
 #pqPing, #pqRebel{
     background-size: cover;
-    padding: 25px;
+    padding: 2.5rem;
     color: white;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2rem;
 }
 #pqPing{
     background: linear-gradient(170deg, rgba(236, 102, 59, .5), rgba(26, 24, 25, .7), rgba(26, 24, 25, .7) 75%, rgba(236, 102, 59, .5)), url(../img/pqping.jpg);
@@ -348,17 +352,17 @@ section:last-child{
 #experiences{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 5rem;
 }
 
 #experiences .text{
     display: flex;
     align-items: flex-end;
-    gap: 30px;
+    gap: 3rem;
 }
 
 #experiences h2{
-    line-height: 40px;
+    line-height: 4rem;
 }
 
 #experiences .cards{
@@ -375,10 +379,10 @@ section:last-child{
     align-items: center;
     justify-content: space-between;
     width: 50%;
-    min-width: 500px;
-    max-width: 800px;
-    padding: 25px;
-    gap: 15px;
+    min-width: 50rem;
+    max-width: 80rem;
+    padding: 2.5rem;
+    gap: 1.5rem;
 }
 
 .actividad:nth-child(1), .actividad:nth-child(4){
@@ -391,11 +395,11 @@ section:last-child{
 .actividad .first-part{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 1.5rem;
 }
 
 .actividad h3{
-    font-size: 24px;
+    font-size: 2.4rem;
 }
 
 .actividad p{
@@ -403,7 +407,149 @@ section:last-child{
 }
 
 /******************CONTACTO******************/
+#contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 65rem; /*para poder darle un tamaño en porcentaje al textarea*/
+}
+#contact h2{
+    margin-bottom: 1rem;
+}
+#contact form{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    background-color: var(--grisclaro);
+    padding: 3rem;
+}
+form .first, form .last{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+}
+form .first{
+    align-items: left;
+}
+form .last{
+    align-items: flex-end;
+    justify-content: space-between;
+}
+form .formTouple{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    height: 100%;
+    width: 100%;
+}
+.formTouple input, .formTouple textarea{
+    border: none;
+    background-color: transparent;
+    padding: .5rem;
+    border-bottom: .3rem solid var(--gris);
+}
+form .first .nya{
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+}
 
+#tel{
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+#tel::-webkit-outer-spin-button,
+#tel::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
+.formExp{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+.formExp > div{
+    display: flex;
+    justify-content: space-between;
+}
+.formExpGroup{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 1.5rem;
+}
+#msj{
+    height: 100%;
+    max-width: 100%;
+    overflow: auto;
+    resize: none;
+}
 
 /******************FOOTER******************/
+#footer{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    background-color: var(--grisclaro);
+    
+}
+#footer .container{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    margin: 0;
+    height: 100%;
+}
+
+#footer > a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+#footer a .logo{
+    max-height: 15rem;
+    padding-right: 1rem;
+    border-right: 2px solid;
+    border-image: linear-gradient(to bottom, #ffcc03, #ec663b) 1;
+}
+#footer .contact-data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+#footer .contact-classic, #footer .contact-social{
+    display: flex;
+    gap: 1.5rem;
+    
+}
+#footer .contact-classic{
+    flex-direction: column;
+}
+#footer .contact-classic li a{
+    color: var(--oscuro);
+}
+#footer .contact-classic li a{
+    padding-left: 1rem;
+}
+#footer .contact-social{
+    font-size: 2.4rem;
+}
+
+#footer .copy{
+    border-top: 1px solid var(--claro);
+    color: var(--claro);
+    width: 100%;
+    text-align: center;
+}
