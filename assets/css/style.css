@@ -403,7 +403,6 @@ section:nth-child(odd){
     min-width: 50rem;
     max-width: 80rem;
     padding: 2.5rem;
-    gap: 1.5rem;
 }
 .actividad:nth-child(1), .actividad:nth-child(4){
     color: var(--oscuro);
@@ -434,6 +433,7 @@ section:nth-child(odd){
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    height: 100%; /*para que el boton quede al final*/
 }
 
 .actividad .first-part{
