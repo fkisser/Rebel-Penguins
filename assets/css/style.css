@@ -4,10 +4,12 @@
     --gris: rgb(118, 117, 104);
     --grisclaro: rgb(220, 218, 218);
     --claro: rgb(245, 244, 244);
-    --amarillo: #ffcc03;
-    --naranja-claro: ##FFDEC5;
-    --naranja: #ec663b;
-    --naranja-oscuro: #8A1B0A;
+    --amarillo-claro: #FFE43E;
+    --amarillo: rgb(255, 204, 3);
+    --amarillo-oscuro: #C99501;
+    --naranja-claro: #F79569;
+    --naranja: rgb(236, 102, 59);
+    --naranja-oscuro: rgb(187, 56, 25);
     --gradiente: linear-gradient(to right, #ffcc03, #ec663b);
 
     --fuenteRebelde: 'Covered By Your Grace', cursive;
@@ -92,7 +94,7 @@ section:nth-child(odd){
 }
 .lleno-amarillo{
     color: var(--oscuro);
-    background-color: var(--amarillo);
+    background: var(--amarillo);
 }
 .vacio-naranja{
     color: var(--naranja);
@@ -100,7 +102,7 @@ section:nth-child(odd){
 }
 .lleno-naranja{
     color: white;
-    background-color: var(--naranja);
+    background: var(--naranja);
 }
 .vacio-gris{
     color: var(--gris);
@@ -137,19 +139,21 @@ section:nth-child(odd){
     z-index: 0;
 }
 .filtro--amarillo{
-    background: rgba(255, 204, 3, 0.7);
+    background: var(--amarillo);
+}
+.filtro--gris{
+    background: var(--gris);
 }
 .filtro--amarillo-grad{
     background: linear-gradient(to bottom, var(--amarillo), var(--amarillo), var(--amarillo),  var(--oscuro));
     opacity: 0.7;
 }
 .filtro--gris-left{
-    background: linear-gradient(to left, var(--gris), var(--gris), var(--gris),  var(--oscuro));
-    opacity: 0.7;
+    background: linear-gradient(150deg, var(--gris) 90%,  rgba(26, 24, 25, .4));
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .filtro--gris-right{
-    background: linear-gradient(to right, var(--gris) 80%,  var(--oscuro));
-    opacity: 0.7;
+    background: linear-gradient(to right, var(--gris) 80%,   rgba(26, 24, 25, .7));
 }
 .filtro--naranja{
     background: rgba(236, 102, 59, 0.7);
@@ -354,23 +358,13 @@ section:nth-child(odd){
     font-weight: 300;
 }
 
-
-
-#pqPing, #pqRebel{
-    background-size: cover;
+.why{
     padding: 2.5rem;
     color: white;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-}
-#pqPing{
-    background: linear-gradient(170deg, rgba(236, 102, 59, .5), rgba(26, 24, 25, .7), rgba(26, 24, 25, .7) 75%, rgba(236, 102, 59, .5)), url(../img/pqping.jpg);
-    background-size: cover;
-    background-position: center;
-}
-#pqRebel{
-    background: linear-gradient(170deg, rgba(236, 102, 59, .5), rgba(26, 24, 25, .7), rgba(26, 24, 25, .7) 75%, rgba(236, 102, 59, .5)), url(../img/pqrebel.jpg);
+    background-image: linear-gradient(170deg, rgba(118, 117, 104, 1), rgba(118, 117, 104, 1) 5%, rgba(26, 24, 25, .7) 85%, rgba(118, 117, 104, 1)), url(../img/pqrebel.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -401,9 +395,8 @@ section:nth-child(odd){
 }
 
 .actividad{
-    background-color: var(--amarillo);
+    position: relative;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     width: 50%;
@@ -412,12 +405,35 @@ section:nth-child(odd){
     padding: 2.5rem;
     gap: 1.5rem;
 }
-
 .actividad:nth-child(1), .actividad:nth-child(4){
     color: var(--oscuro);
 }
-.actividad:nth-child(2), .actividad:nth-child(3){
-    background-color: var(--gris);
+.actividad:nth-child(1){
+    background: linear-gradient(120deg, rgba(255, 204, 3, .6), rgba(255, 204, 3, .9)), url(../img/exp1.png);
+    background-position: bottom;
+    background-size: cover;
+}
+.actividad:nth-child(2){
+    background: linear-gradient(120deg, rgba(26, 24, 25, .6), rgba(118, 117, 104, .9)), url(../img/exp2.png);
+    background-position: center;
+    background-size: cover;
+}
+.actividad:nth-child(3){
+    background: linear-gradient(120deg, rgba(26, 24, 25, .6), rgba(118, 117, 104, .9)), url(../img/exp3.png);
+    background-position: center;
+    background-size: cover;
+}
+.actividad:nth-child(4){
+    background: linear-gradient(120deg, rgba(255, 204, 3, .6), rgba(255, 204, 3, .9)), url(../img/exp4.png);
+    background-position: bottom;
+    background-size: cover;
+}
+.actividad .content{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .actividad .first-part{

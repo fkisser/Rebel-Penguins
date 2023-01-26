@@ -47,16 +47,14 @@ html {
 }
 .boton:hover{
     cursor: pointer;
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
+    transform: translateY(-2px);
     transition: all 0.2s ease-out;
 }
 .lleno-amarillo:hover{
-    background-color: var(--naranja);
-    color: white;
     transition: all 0.2s ease-out;
 }
 .lleno-naranja:hover{
-    background-color: var(--amarillo);
-    color: var(--oscuro);
     transition: all 0.2s ease-out;
 }
 .vacio-amarillo:hover{
@@ -112,6 +110,15 @@ html {
     animation: aparecer .5s ease-in forwards;
 }
 .personas:hover .glass{
+    animation: desaparecer .5s ease-out forwards;
+}
+
+/*EXPERIENCES*/
+
+.actividad .glass{
+    animation: aparecer .5s ease-in forwards;
+}
+.actividad:hover .glass{
     animation: desaparecer .5s ease-out forwards;
 }
 
