@@ -4,8 +4,10 @@
     --gris: rgb(118, 117, 104);
     --grisclaro: rgb(220, 218, 218);
     --claro: rgb(245, 244, 244);
-    --amarillo: rgb(255, 204, 3);
-    --naranja: rgb(236, 102, 59);
+    --amarillo: #ffcc03;
+    --naranja-claro: ##FFDEC5;
+    --naranja: #ec663b;
+    --naranja-oscuro: #8A1B0A;
     --gradiente: linear-gradient(to right, #ffcc03, #ec663b);
 
     --fuenteRebelde: 'Covered By Your Grace', cursive;
@@ -66,11 +68,14 @@ section:nth-child(odd){
 .sect-paragraph{
     font-size: 1.8rem;
     text-align: justify;
+    text-indent: 1.5em;
 }
 .minor-title{
-    font-size: 4rem;
-    font-family: var(--fuenteRebelde);
+    font-size: 3.5rem;
     color: var(--amarillo);
+    text-shadow: .1rem .1rem .1rem var(--oscuro);
+}
+.t-sha{
     text-shadow: .1rem .1rem .1rem var(--oscuro);
 }
 /* BOTONES */
@@ -123,11 +128,27 @@ section:nth-child(odd){
 }
 
 /*FILTROS*/
+.glass{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
 .filtro--amarillo{
     background: rgba(255, 204, 3, 0.7);
 }
 .filtro--amarillo-grad{
     background: linear-gradient(to bottom, var(--amarillo), var(--amarillo), var(--amarillo),  var(--oscuro));
+    opacity: 0.7;
+}
+.filtro--gris-left{
+    background: linear-gradient(to left, var(--gris), var(--gris), var(--gris),  var(--oscuro));
+    opacity: 0.7;
+}
+.filtro--gris-right{
+    background: linear-gradient(to right, var(--gris) 80%,  var(--oscuro));
     opacity: 0.7;
 }
 .filtro--naranja{
@@ -246,7 +267,7 @@ section:nth-child(odd){
     text-shadow: .1rem .1rem .1rem var(--oscuro);
 }
 
-#hero .glass{
+.glass{
     position: absolute;
     top: 0;
     left: 0;
@@ -283,12 +304,12 @@ section:nth-child(odd){
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: center;
-    gap: 5rem;
+    width: 100%;
 }
 
 .personas{
-    max-width: 40rem;
-    flex-direction: column;
+    position: relative;
+    width: 50%;
     justify-content: space-between;
     align-items: center;
     padding: 2.5rem;
@@ -296,37 +317,44 @@ section:nth-child(odd){
     background: linear-gradient(120deg, rgba(118, 117, 104, .5), rgba(26, 24, 25, .7), rgba(26, 24, 25, .7) 75%, rgba(118, 117, 104, .5)), url(../img/hero2.jpeg);
     background-size: cover;
 }
-.personas h4{
-    font-family: var(--fuenteRebelde);
-    font-size: 3.5rem;
-}
-
-.personas li{
-    font-style: italic;
-    font-weight: 300;
-    text-align: center;
+.personas .content{
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .personas .first-part{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    gap: 1.5rem;
+    justify-content: center;
 }
-
-.personas .circle-frame{
-    width: 15rem;
-    height: 15rem;
-}
-
 .personas .profile{
     width: 15rem;
     height: 15rem;
-    background: url(../img/perfil-unknown.png);
-    background-position: center;
-    background-size: cover;
+    border: solid .4rem;
+    border-radius: 50%;
 }
+.personas .last-part{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.personas h4{
+    font-family: var(--fuenteRebelde);
+    font-size: 3rem;
+    line-height: 2rem;
+}
+.personas li{
+    font-style: italic;
+    font-weight: 300;
+}
+
+
 
 #pqPing, #pqRebel{
     background-size: cover;
@@ -491,6 +519,9 @@ form .first .nya{
     max-width: 100%;
     overflow: auto;
     resize: none;
+}
+.send{
+    border: none;
 }
 
 /******************FOOTER******************/

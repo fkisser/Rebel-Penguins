@@ -54,24 +54,38 @@ html {
     color: white;
     transition: all 0.2s ease-out;
 }
+.lleno-naranja:hover{
+    background-color: var(--amarillo);
+    color: var(--oscuro);
+    transition: all 0.2s ease-out;
+}
 .vacio-amarillo:hover{
     color: var(--oscuro);
     background-color: var(--amarillo);
     transition: all 0.2s ease-out;
 }
+.vacio-oscuro:hover{
+    color: var(--amarillo);
+    background-color: var(--oscuro);
+    transition: all 0.2s ease-out;
+}
 .send:hover{
     color: var(--oscuro);
     background-color: var(--amarillo);
-    border: none;
+    transition: all 0.2s ease-out;
+}
+.send .icon{
     transition: all 0.2s ease-out;
 }
 .send:hover .icon{
-    transform: translateX(2rem) rotate(45deg) scale(1.5);
+    transform: translateX(2rem) rotate(45deg) scale(1.8);
     transition: all 0.2s ease-out;
+}
+.send span{
+    animation: aparecer .1s ease-out forwards;
 }
 .send:hover span{
     animation: desaparecer .1s ease-out forwards;
-    transition: all 0.2s ease-out;
 }
 
 /*HEADER*/
@@ -92,18 +106,21 @@ html {
     border-bottom: .2rem solid var(--naranja);
     transition: all 0.3s ease;
 }
+/*ABOUT US*/
 
-
+.personas .glass{
+    animation: aparecer .5s ease-in forwards;
+}
+.personas:hover .glass{
+    animation: desaparecer .5s ease-out forwards;
+}
 
 /*CONTACTO*/
-.formTouple{
 
-}
-
-.formTouple input{
+.formTouple input, .formTouple textarea{
     transition: all 0.3s ease;
 }
-.formTouple input:hover, textarea:hover, .formTouple input:focus, textarea:focus{
+input:hover, textarea:hover, input:focus, textarea:focus{
     background-color: var(--claro);
     transition: all 0.3s ease;
     border-bottom: .3rem solid var(--naranja );
