@@ -1,3 +1,15 @@
+@media (max-width: 992) {
+    .sect-title{
+        /* font-size: 4.2rem;
+        line-height: 2.5rem;
+        margin-top: 3rem; */
+    }
+    .sect-paragraph{
+        /* font-size: 1.1rem;
+        text-indent: 1.5em; */
+    }
+}
+/*HEADER*/
 @media (max-width: 992px) {
     .menu nav {
         position: absolute;
@@ -12,8 +24,10 @@
         justify-content: space-around;
         gap: 1.5rem;
         max-width: 150rem;
+        color: white;
     }
     .menu a{
+        color: white;
         border-bottom: .2rem solid var(--gris);
         transition: all 0.3s ease;
     }
@@ -56,5 +70,53 @@
     .menu .links{
         text-align: center;
         gap: 3.5rem;
+    }
+}
+/*HERO*/
+@media (max-width: 1140px) {
+    #hero{
+        padding: 6rem 0 2rem 1rem;
+    }
+    #hero .content .hero-text{
+        font-size: 2rem;
+    }
+}
+
+/*ABOUT US*/
+@media (max-width: 1140px) {
+    .personas{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .personas .content{
+        flex-direction: column;
+    }
+    .personas .last-part{
+        align-items: center;
+    }
+    .why{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    #about .cards{
+        flex-direction: column-reverse;
+    }
+    .personas .content{
+        flex-direction: row;
+    }
+    .personas .last-part{
+        align-items: flex-start;
+    }
+}
+@media (max-width: 576px) {
+    .personas .content{
+        flex-direction: column;
+    }
+    .personas .profile{
+        display: none;
+    }
+    .personas .last-part{
+        align-items: center;
     }
 }

@@ -306,7 +306,6 @@ section:nth-child(odd){
 
 #about .cards{
     display: flex;
-    flex-wrap: wrap-reverse;
     justify-content: center;
     width: 100%;
 }
@@ -350,8 +349,8 @@ section:nth-child(odd){
 }
 .personas h4{
     font-family: var(--fuenteRebelde);
-    font-size: 3rem;
-    line-height: 2rem;
+    font-size: 4rem;
+    line-height: 3rem;
 }
 .personas li{
     font-style: italic;
@@ -384,7 +383,7 @@ section:nth-child(odd){
 }
 
 #experiences h2{
-    line-height: 4rem;
+    line-height: 6rem;
 }
 
 #experiences .cards{
@@ -592,6 +591,8 @@ form .first .nya{
 }
 #footer .contact-social{
     font-size: 2.4rem;
+    display: flex;
+    align-items: center;
 }
 
 #footer .copy{
