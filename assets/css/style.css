@@ -182,8 +182,7 @@ section:nth-child(odd){
     align-items: center;
     justify-content: center;
     height: 10rem;
-    width: 100%;
-    max-width: 200rem;
+    width: 100vw;
     box-shadow: 0 0 .5rem 0 rgba(38, 38, 38 , .5);
 }
 .logo{
@@ -193,7 +192,7 @@ section:nth-child(odd){
     max-height: 100%;
     padding: 1.5rem 2.5rem;
     width: 100%;
-    max-width: 150rem;
+    max-width: 200rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -266,9 +265,6 @@ section:nth-child(odd){
     text-align: center;
     font-size: 2.2rem;
     margin-top: -3rem;
-}
-#hero h1, #hero .hero-text{
-    text-shadow: .1rem .1rem .1rem var(--oscuro);
 }
 
 .glass{
@@ -378,11 +374,12 @@ section:nth-child(odd){
 
 #experiences .text{
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     gap: 3rem;
 }
 
 #experiences h2{
+    margin-top: -1rem;
     line-height: 6rem;
 }
 
@@ -455,14 +452,13 @@ section:nth-child(odd){
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 65rem; /*para poder darle un tamaño en porcentaje al textarea*/
 }
 #contact h2{
     margin-bottom: 1rem;
 }
 #contact form{
     width: 100%;
-    height: 100%;
+    height: 65rem; /*para poder darle un tamaño en porcentaje al textarea*/
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -478,7 +474,7 @@ form .first, form .last{
     gap: 2rem;
 }
 form .first{
-    align-items: left;
+    align-items: flex-start;
 }
 form .last{
     align-items: flex-end;
@@ -487,7 +483,7 @@ form .last{
 form .formTouple{
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     height: 100%;
     width: 100%;
 }
