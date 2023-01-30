@@ -277,12 +277,7 @@
     form label{
         font-size: 1.1rem;
     }
-    form input:not(input[type="checkbox"]), form textarea{
-        width: 100%;
-    }
-    form input["type:"]{
-        width: unset;
-    }
+    
 }
 
 /*FOOTER*/

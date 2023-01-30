@@ -531,6 +531,9 @@ form .first .nya{
     overflow: auto;
     resize: none;
 }
+form input:not(input[type="checkbox"]), form textarea{
+    width: 100%;
+}
 .send{
     border: none;
 }
