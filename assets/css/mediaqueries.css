@@ -1,4 +1,4 @@
-@media (max-width: 992) {
+@media (max-width: 992px) {
     .sect-title{
         /* font-size: 4.2rem;
         line-height: 2.5rem;
@@ -7,6 +7,19 @@
     .sect-paragraph{
         /* font-size: 1.1rem;
         text-indent: 1.5em; */
+    }
+}
+@media (max-width: 768px) {
+    section:last-child{
+        margin-bottom: 0;
+    }
+    .sect-title{
+        font-size: 3rem;
+        line-height: 2rem;
+        margin-top: 2rem;
+    }
+    .sect-paragraph{
+        font-size: 1.5rem;
     }
 }
 @media (max-width: 576px) {
@@ -108,10 +121,25 @@
         font-size: 2.5rem;
     }
 }
+@media (max-width: 768px) {
+    #hero .content .hero-text{
+        font-size: 1.8rem;
+        gap: 1.5rem;
+    }
+    #hero .title img{
+        height: 15rem;
+    }
+    #hero h1{
+        font-size: 5rem;
+        line-height: 3.2rem;
+    }
+    #hero h1 span{
+        font-size: 6.4rem;
+    }
+}
 @media (max-width: 576px) {
     #hero{
         margin-top: -3rem;
-        padding: 6rem 0 2rem 1rem;
     }
     #hero .content .hero-text{
         font-size: 1.5rem;
@@ -123,7 +151,6 @@
     #hero .title img{
         height: 12rem;
     }
-    
     #hero h1{
         font-size: 4rem;
         line-height: 2.5rem;
@@ -243,44 +270,47 @@
     }
 }
 /*CONTACT*/
-@media (max-width: 576px) {
+@media (max-width: 855px) {
     #contact form{
         height: 100%;
-
         flex-direction: column;
         gap: 1rem;
         padding: 1rem;
     }
+}
+@media (max-width: 576px) {
     .formTouple{
         gap: 0;
     }
     form .first, form .last{
         gap: .5rem;
     }
-    
     form .first .nya{
         flex-direction: column;
         gap: .5rem;
     }
-    
     .formExp{
         gap: .5rem;
     }
-    .formExp > div{
-        flex-direction: column;
-        gap: .5rem;
-    }
-    .formExpGroup{
-        flex-direction: column;
-        gap: .5rem;
-    }
-    form label{
+    form label, .formTouple input::placeholder, .formTouple textarea::placeholder{
         font-size: 1.1rem;
     }
-    
 }
 
 /*FOOTER*/
+@media (max-width: 900px) {
+    #footer{
+        font-size: 1.2rem;
+    }
+    #footer a .logo{
+        max-height: 7rem;
+        padding-right: 0;
+        border-right: none;
+    }
+    .contact-social{
+        flex-direction: column;
+    }
+}
 @media (max-width: 576px) {
     #footer{
         font-size: 1rem;
@@ -302,11 +332,10 @@
     }
     #footer a .logo{
         max-height: 5rem;
-        padding-right: 0;
-        border-right: none;
     }
     #footer .contact-data{
         gap: 1rem;
+        border: none;
     }
     #footer .contact-classic, #footer .contact-social{
         display: flex;        
@@ -317,7 +346,6 @@
     }
     #footer .contact-social{
         font-size: 2rem;
-        flex-direction: column;
         justify-content: center;
     }    
 }

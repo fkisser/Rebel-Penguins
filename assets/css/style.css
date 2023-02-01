@@ -249,6 +249,7 @@ section:nth-child(odd){
     line-height: 4rem;
     text-transform: uppercase;
     padding-bottom: 2.5rem;
+    width: min-content;
 }
 #hero h1 span{
     font-size: 9rem;
@@ -458,33 +459,37 @@ section:nth-child(odd){
 }
 #contact form{
     width: 100%;
-    height: 65rem; /*para poder darle un tamaño en porcentaje al textarea*/
-    display:flex;
+    height: 50rem;/*para poder darle un tamaño en porcentaje al textarea*/
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
     background-color: var(--grisclaro);
-    padding: 3rem;
+    padding: 2rem;
 }
 form .first, form .last{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
     width: 100%;
-    height: 100%;
-    gap: 2rem;
-}
-form .first{
-    align-items: flex-start;
 }
 form .last{
     align-items: flex-end;
-    justify-content: space-between;
+    height: 100%;
+}
+form .last .formTouple{
+    height: 100%;
 }
 form .formTouple{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 100%;
+    width: 100%;
+}
+form .checkTouple{
+    display: flex;
+    gap: 1rem;
     width: 100%;
 }
 .formTouple input, .formTouple textarea{
@@ -512,18 +517,8 @@ form .first .nya{
 .formExp{
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
     width: 100%;
-}
-.formExp > div{
-    display: flex;
-    justify-content: space-between;
-}
-.formExpGroup{
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    gap: 1.5rem;
 }
 #msj{
     height: 100%;
@@ -564,15 +559,15 @@ form input:not(input[type="checkbox"]), form textarea{
 }
 #footer a .logo{
     max-height: 15rem;
-    padding-right: 1rem;
-    border-right: 2px solid;
-    border-image: linear-gradient(to bottom, #ffcc03, #ec663b) 1;
 }
 #footer .contact-data{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding-left: 1rem;
+    border-left: 2px solid;
+    border-image: linear-gradient(to bottom, #ffcc03, #ec663b) 1;
 }
 #footer .contact-classic, #footer .contact-social{
     display: flex;
