@@ -51,6 +51,29 @@
         visibility: hidden;
     }
 }
+@keyframes jackInTheBox {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(0.1) rotate(30deg);
+        transform: scale(0.1) rotate(30deg);
+        -webkit-transform-origin: center bottom;
+        transform-origin: center bottom;
+    }
+    50% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+    70% {
+        -webkit-transform: rotate(3deg);
+        transform: rotate(3deg);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
 
 html {
     scroll-padding-top: 7rem;
@@ -121,6 +144,64 @@ html {
     border-bottom: .2rem solid var(--naranja);
     transition: all 0.3s ease;
 }
+
+/*HERO*/
+#hero .title{
+    animation: jackInTheBox 1.2s ease forwards;
+}
+@keyframes backInLeft {
+    0% {
+        -webkit-transform: translateX(-2000px) scale(0.7);
+        transform: translateX(-2000px) scale(0.7);
+        opacity: 0.7;
+    }
+    80% {
+        -webkit-transform: translateX(0px) scale(0.7);
+        transform: translateX(0px) scale(0.7);
+        opacity: 0.7;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#hero .hero-text p{
+    opacity: 0;
+    animation: backInLeft .7s ease-in forwards;
+}
+#hero .hero-text p:nth-child(1){
+    animation-delay: 1s;
+}
+#hero .hero-text p:nth-child(2){
+    animation-delay: 1.7s;
+}
+@keyframes zoomInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+        transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    99% {
+        opacity: 1;
+        -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+        transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+#hero .boton{
+    opacity: 0;
+    animation: zoomInUp .8s ease forwards;
+    animation-delay: 2.4s;
+}
+
 /*ABOUT US*/
 
 .personas .glass{

@@ -58,6 +58,9 @@
         width: 100%;
         background-color: var(--gris);
         padding: 1rem 0;
+        -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.7);
+        -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.7);
+        box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.7);
     }
     .menu .links{
         display: flex;
@@ -82,7 +85,6 @@
     
     #menu-button:checked ~ .close {
         display: flex;
-        /* font-size: 3.6rem; */
     }
     #menu-button:not(:checked) ~ .close {
         display: none;
@@ -93,6 +95,7 @@
     .menu nav {
         width: 40%;
         padding: 3.5rem 2.5rem;
+
     }
     .menu .links{
         display: flex;
@@ -105,11 +108,14 @@
 @media (max-width: 576px) {
     .menu nav {
         width: 100%;
-        padding: 3.5rem 2.5rem;
+        padding: 2rem;
     }
     .menu .links{
         text-align: center;
-        gap: 3.5rem;
+        gap: 2rem;
+    }
+    .menu .links a{
+        font-size: 1.2rem;
     }
 }
 /*HERO*/
