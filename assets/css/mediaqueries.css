@@ -82,7 +82,7 @@
     
     #menu-button:checked ~ .close {
         display: flex;
-        font-size: 3.6rem;
+        /* font-size: 3.6rem; */
     }
     #menu-button:not(:checked) ~ .close {
         display: none;
