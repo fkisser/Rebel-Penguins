@@ -630,7 +630,7 @@ form input:not(input[type="checkbox"]), form textarea{
 /*LOGIN Y REGISTER*/
 #login, #register{
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     min-height: 60rem;
     padding: 5rem;
     display: flex;
