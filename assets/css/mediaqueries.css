@@ -55,6 +55,8 @@
         position: absolute;
         top: 7rem;
         right: 0;
+        transform: translateX(200%);
+        transition: all 0.5s ease-in-out;
         width: 100%;
         background-color: var(--gris);
         padding: 1rem 0;
@@ -76,26 +78,24 @@
     }
     .menu .open{
         display: flex;
-        font-size: 3.6rem;
     }
     
     #menu-button:checked ~ .open {
         display: none;
     }
-    
     #menu-button:checked ~ .close {
         display: flex;
-    }
-    #menu-button:not(:checked) ~ .close {
-        display: none;
     }
 }
 
 @media (max-width: 768px) {
+    #menu-button:checked ~ .glass{
+        display: block;
+    }
     .menu nav {
         width: 40%;
         padding: 3.5rem 2.5rem;
-
+        z-index: 2;
     }
     .menu .links{
         display: flex;
