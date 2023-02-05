@@ -635,7 +635,11 @@ form input:not(input[type="checkbox"]), form textarea{
     background: linear-gradient(to bottom, rgba(220, 218, 218, .5) 85%,  var(--oscuro)) , url(../img/log-reg.jpg);
     background-position: top;
     background-size: cover;
-    
+}
+#login h1, #register h1{
+    font-family: var(--fuenteRebelde);
+    font-size: 3rem;
+    color: var(--amarillo);
 }
 #login form, #register form{
     display: flex;
@@ -664,4 +668,9 @@ form .botones{
 
 #login .boton, #register .boton{
     width: 100%;
+}
+
+#login p a, #register p a{
+    color: var(--oscuro);
+    font-weight: 700;
 }

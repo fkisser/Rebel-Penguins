@@ -241,3 +241,14 @@ input:hover, textarea:hover, input:focus, textarea:focus{
     background-clip: text;
     -webkit-background-clip: text;
 }
+
+/*LOGIN Y REGISTER*/
+
+#login p a, #register p a{
+    transition: all 0.3s ease;
+}
+
+#login p a:hover, #register p a:hover{
+    color: var(--naranja);
+    transition: all 0.3s ease;
+}
