@@ -640,7 +640,6 @@ form input:not(input[type="checkbox"]), form textarea{
     background: linear-gradient(to bottom, rgba(220, 218, 218, .5) 85%,  var(--oscuro)) , url(../img/log-reg.jpg);
     background-position: top;
     background-size: cover;
-    overflow: scroll;
 }
 #login h1, #register h1{
     font-family: var(--fuenteRebelde);
