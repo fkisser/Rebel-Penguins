@@ -28,7 +28,9 @@ html{
     background: var(--claro);
     font-size: 62.5%; /*1 rem = 10px*/
 }
-
+body{
+    height: 100vh;
+}
 main {
     margin-top: 10rem;
     display: flex;
@@ -629,6 +631,7 @@ form input:not(input[type="checkbox"]), form textarea{
 #login, #register{
     width: 100vw;
     height: 100vh;
+    min-height: 60rem;
     padding: 5rem;
     display: flex;
     height: max(100%, 100vh);
